@@ -1,42 +1,306 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Joshua Maniego | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Joshua Maniego | Cybersecurity & Tech Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<header>
-    <h1>Joshua Maniego</h1>
-    <p>Bachelor of Science in Information Technology | Cybersecurity Student</p>
+    <header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        <div class="logo">
+            <span class="terminal-prompt">&gt;_</span>
+            JOSHUA<span class="highlight">.MANIEGO</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="active">
+                <i class="fas fa-terminal"></i>
+                Home
+            </a>
+
+            <a href="about.html">
+                <i class="fas fa-user-shield"></i>
+                About
+            </a>
+
+            <a href="projects.html">
+                <i class="fas fa-code-branch"></i>
+                Projects
+            </a>
+
+            <a href="contact.html">
+                <i class="fas fa-paper-plane"></i>
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
 
 
-<section class="hero">
-
-    <h2>Welcome to My Portfolio</h2>
-
-    <p>
-        Hello! I am Joshua Maniego, a Bachelor of Science in Information
-        Technology student specializing in Cybersecurity. I am interested
-        in information security, technology, and continuously improving my
-        skills in protecting digital systems and data.
-    </p>
-
-</section>
+    <main>
 
 
-<footer>
-    <p>© 2026 Joshua Maniego</p>
-</footer>
+        <section class="hero-container">
+
+            <div class="hero">
+
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    Cybersecurity Specialist in Training
+                </div>
+
+                <h1>
+                    Securing Digital Systems &
+                    Building Modern Tech
+                </h1>
+
+                <p>
+                    Hello! I am Joshua Maniego, a Bachelor of Science in
+                    Information Technology student specializing in Cybersecurity.
+                </p>
+
+                <p>
+                    I am passionate about information security, computer systems,
+                    programming, and continuously improving my technical skills.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="projects.html" class="btn btn-primary">
+                        <i class="fas fa-laptop-code"></i>
+                        View Projects
+                    </a>
+
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-address-book"></i>
+                        Get In Touch
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="terminal-window">
+
+                <div class="terminal-header">
+
+                    <div class="dots">
+
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+
+                    </div>
+
+                    <div class="title">
+                        user@joshua-portfolio:~
+                    </div>
+
+                </div>
+
+
+                <div class="terminal-body">
+
+                    <p>
+                        <span class="prompt">guest@sys:~$</span>
+                        whoami
+                    </p>
+
+                    <p class="output">
+                        Joshua S. Maniego
+                    </p>
+
+                    <p>
+                        <span class="prompt">guest@sys:~$</span>
+                        status --info
+                    </p>
+
+                    <p class="output">
+                        [+] Student: BS Information Technology
+                    </p>
+
+                    <p class="output">
+                        [+] Major: Cybersecurity
+                    </p>
+
+                    <p class="output">
+                        [+] Focus: Security, Networking, Programming
+                    </p>
+
+                    <p>
+                        <span class="prompt">guest@sys:~$</span>
+                        <span class="blink">_</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="interactive-section" id="skills-section">
+
+            <div class="section-title">
+
+                <span class="section-number">01</span>
+
+                <div>
+
+                    <h2>
+                        <i class="fas fa-terminal"></i>
+                        My Skills & Learning Areas
+                    </h2>
+
+                    <p>
+                        Search and filter the technical areas I am currently
+                        learning and developing.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="interactive-controls">
+
+                <div class="search-box">
+
+                    <i class="fas fa-search"></i>
+
+                    <input
+                        type="text"
+                        id="skillSearch"
+                        placeholder="Search skills..."
+                        autocomplete="off">
+
+                </div>
+
+
+
+                <div class="filter-buttons">
+
+                    <button
+                        class="filter-btn active"
+                        data-category="All">
+
+                        All
+
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="Programming">
+
+                        Programming
+
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="Web">
+
+                        Web
+
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="Cybersecurity">
+
+                        Cybersecurity
+
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="Networking">
+
+                        Networking
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="skillsContainer"
+                class="skills-grid">
+            </div>
+
+
+
+            <p
+                id="skillsMessage"
+                class="skills-message">
+            </p>
+
+        </section>
+
+
+
+        <section class="cta-section">
+
+            <div>
+
+                <span>
+                    <i class="fas fa-terminal"></i>
+                    EXPLORE MY PORTFOLIO
+                </span>
+
+                <h2>
+                    Learning Today,
+                    <span class="highlight">Securing Tomorrow.</span>
+                </h2>
+
+                <p>
+                    Check out my projects or learn more about my background.
+                </p>
+
+            </div>
+
+            <a href="projects.html" class="btn btn-primary">
+                View Projects
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Joshua Maniego. All rights reserved.
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
+```
